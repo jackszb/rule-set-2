@@ -12,13 +12,14 @@ adblock_urls = [
     "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
     "https://raw.githubusercontent.com/jackszb/mullvad-to-adguard/main/adguard/categories/adblock/adblock.txt",
     "https://raw.githubusercontent.com/jackszb/json-txt-2/main/domains.txt",
+    "https://github.com/Cats-Team/AdRules/raw/refs/heads/script/rules/jiekouAD.txt",
 ]
 
 # 输出文件名改为 adblock
 raw_file_path = os.path.join(OUTPUT_DIR, "adblock.txt")
 srs_file_path = os.path.join(OUTPUT_DIR, "adblock.srs")
 
-# 分流域名规则链接
+# 路由分流规则链接
 routing_domain = {
     "direct": {
         "apple-cn": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-apple@cn.srs",
@@ -48,7 +49,7 @@ routing_ip = {
     },
 }
 
-# 下载三条广告规则 → 合并为 adblock.txt
+# 下载广告规则 → 合并为 adblock.txt
 def download_filter():
     print("Downloading and merging adblock rules...")
 
@@ -62,14 +63,14 @@ def download_filter():
             if line:
                 all_lines.add(line)
 
-    # 合并写入 adblock.txt
+    # 合并并写入 adblock.txt
     with open(raw_file_path, "w", encoding="utf-8") as f:
         f.write("\n".join(sorted(all_lines)) + "\n")
 
     print("Merged adblock.txt generated.")
 
 
-# 使用 sing-box 将过滤器文件转换为 SRS 格式
+# 使用 sing-box 转换规则为 SRS 格式
 def convert_with_sing_box():
     print("Converting adblock.txt with sing-box...")
     result = subprocess.run(
@@ -91,6 +92,22 @@ def convert_with_sing_box():
         print(result.stderr)
         raise RuntimeError("sing-box conversion failed")
     print("adblock.srs generated.")
+
+
+# 提交更改到 Git
+def git_commit_changes():
+    # 检查 Git 状态，查看是否有未提交的更改
+    result = subprocess.run(
+        ["git", "status", "--porcelain"],
+        capture_output=True,
+        text=True
+    )
+    if result.stdout:
+        print("Unstaged changes detected. Committing changes...")
+        # 暂存所有更改
+        subprocess.run(["git", "add", "."])
+        # 提交更改
+        subprocess.run(['git', 'commit', '-m', 'Auto commit changes after rule update'])
 
 
 def decompile_srs_to_json(srs_path, json_path):
@@ -231,3 +248,6 @@ if __name__ == "__main__":
             os.remove(os.path.join(OUTPUT_DIR, file))
 
     print("All done. Final SRS files generated.")
+
+    # 提交更改到 Git
+    git_commit_changes()
