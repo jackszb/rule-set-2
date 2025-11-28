@@ -12,6 +12,7 @@ adblock_urls = [
     "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
     "https://raw.githubusercontent.com/jackszb/mullvad-to-adguard/main/adguard/categories/adblock/adblock.txt",
     "https://raw.githubusercontent.com/jackszb/json-txt-2/main/domains.txt",
+    "https://github.com/Cats-Team/AdRules/raw/refs/heads/script/rules/jiekouAD.txt",
 ]
 
 # 输出文件名改为 adblock
