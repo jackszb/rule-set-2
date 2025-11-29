@@ -26,8 +26,8 @@ jobs:
 
       - name: Install sing-box
         run: |
-          curl -fsSL https://sing-box.app/deb-install.sh | bash
-          echo "$HOME/.sing-box" >> $GITHUB_PATH
+          curl -fsSL https://sing-box.app/install.sh | sh
+          echo "$HOME/.sing-box/bin" >> $GITHUB_PATH
 
       - name: Run conversion script
         run: python main.py
