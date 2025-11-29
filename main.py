@@ -9,7 +9,6 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # 三条广告规则源（合并为 adblock.txt）
 adblock_urls = [
-    "https://raw.githubusercontent.com/jackszb/mullvad-to-adguard/main/adguard/categories/adblock/adblock.txt",
     "https://raw.githubusercontent.com/jackszb/json-txt-2/main/domains.txt",
 ]
 
