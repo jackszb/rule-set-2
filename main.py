@@ -23,10 +23,13 @@ srs_file_path = os.path.join(OUTPUT_DIR, "adblock.srs")
 routing_domain = {
     "direct": {
         "apple-cn": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-apple@cn.srs",
-        "apple-pki-cn": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-apple-pki@cn.srs",
-        "apple-dev-cn": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-apple-dev@cn.srs",
+        "icloud": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-icloud@cn.srs",
+        "alibaba": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-alibaba.srs",
+        "jindong": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-jd.srs",
+        "tencent": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-tencent.srs",
         "cctv": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cctv.srs",
         "bilibili": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-bilibili.srs",
+        "douyin": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-douyin.srs",
         "wechat": "https://raw.githubusercontent.com/jackszb/sing-box-abc/main/wechat.srs",
         "geosite-private": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-private.srs",
         "geosite-cn": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
@@ -34,6 +37,12 @@ routing_domain = {
     "proxy": {
         "github": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-github.srs",
         "openai": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
+        "gemini": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google-gemini.srs",
+        "twitter": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-twitter.srs",
+        "facebook": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-facebook.srs",
+        "instagram": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-instagram.srs",
+        "discord": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-discord.srs",
+        "google": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-google.srs",
         "youtube": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs",
         "cloudflare": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cloudflare.srs",
         "geosite-geolocation-!cn": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
@@ -251,7 +260,6 @@ if __name__ == "__main__":
     for file in os.listdir(OUTPUT_DIR):
         if file not in KEEP:
             os.remove(os.path.join(OUTPUT_DIR, file))
-
     print("All done. Final SRS files generated.")
 
     # 提交更改到 Git
