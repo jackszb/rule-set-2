@@ -21,16 +21,19 @@ srs_file_path = os.path.join(OUTPUT_DIR, "adblock.srs")
 # 路由分流规则链接
 routing_domain = {
     "direct": {
-        "apple-cn": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-apple@cn.srs",
-        "apple-pki-cn": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-apple-pki@cn.srs",
-        "apple-dev-cn": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-apple-dev@cn.srs",
-        "geosite-cn": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-cn.srs",
-        "geosite-cloudflare-cn": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-cloudflare@cn.srs",
+        "apple-cn": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-apple@cn.srs",
+        "apple-pki-cn": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-apple-pki@cn.srs",
+        "apple-dev-cn": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-apple-dev@cn.srs",
+        "cctv": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cctv.srs",
+        "bilibili": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-bilibili.srs",
+        "wechat": "https://raw.githubusercontent.com/jackszb/sing-box-abc/main/wechat.srs",
+        "geosite-private": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-private.srs",
+        "geosite-cn": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
     },
     "proxy": {
-        "github": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-github.srs",
-        "openai": "https://raw.githubusercontent.com/SagerNet/sing-geosite/refs/heads/rule-set/geosite-openai.srs",
-        "category-ai-chat-!cn": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/category-ai-chat-!cn.srs",
+        "github": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-github.srs",
+        "openai": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
+        "youtube": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs",
         "geosite-geolocation-!cn": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
     },
 }
@@ -39,12 +42,13 @@ routing_domain = {
 routing_ip = {
     "direct": {
         "geoip-cn": "https://raw.githubusercontent.com/SagerNet/sing-geoip/rule-set/geoip-cn.srs",
+        "geoip-private": "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/srs/private.srs",
     },
     "proxy": {
-        "telegram": "https://github.com/Loyalsoldier/geoip/raw/refs/heads/release/srs/telegram.srs",
-        "netflix": "https://github.com/Loyalsoldier/geoip/raw/refs/heads/release/srs/netflix.srs",
-        "google": "https://github.com/Loyalsoldier/geoip/raw/refs/heads/release/srs/google.srs",
-        "twitter": "https://github.com/Loyalsoldier/geoip/raw/refs/heads/release/srs/twitter.srs",
+        "telegram": "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/srs/telegram.srs",
+        "netflix": "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/srs/netflix.srs",
+        "google": "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/srs/google.srs",
+        "twitter": "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/srs/twitter.srs",
     },
 }
 
