@@ -34,6 +34,7 @@ routing_domain = {
         "github": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-github.srs",
         "openai": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-openai.srs",
         "youtube": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-youtube.srs",
+        "cloudflare": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cloudflare.srs",
         "geosite-geolocation-!cn": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-geolocation-!cn.srs",
     },
 }
