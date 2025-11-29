@@ -11,7 +11,6 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 adblock_urls = [
     "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
     "https://raw.githubusercontent.com/jackszb/mullvad-to-adguard/main/adguard/categories/adblock/adblock.txt",
-    "https://raw.githubusercontent.com/jackszb/json-txt-2/main/domains.txt",
 ]
 
 # 输出文件名改为 adblock
