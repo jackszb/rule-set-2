@@ -12,6 +12,7 @@ adblock_urls = [
     "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
     "https://raw.githubusercontent.com/jackszb/mullvad-to-adguard/main/adguard/categories/adblock/adblock.txt",
     "https://raw.githubusercontent.com/jackszb/json-txt-2/main/domains.txt",
+    "https://raw.githubusercontent.com/louisa-uno/DNSBlocklists/auto-update/Advertising.txt",
     "https://raw.githubusercontent.com/jackszb/sing-box-abc/main/httpdns-cn.txt",
 ]
 
